@@ -9,13 +9,13 @@ public class DBConnection {
         Connection con = null;
 
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("org.postgresql.Driver");
 
-            con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/attedance_db",
-                "root",
-                "komal25"
-            );
+            String url = System.getenv("DB_URL");
+            String user = System.getenv("DB_USER");
+            String password = System.getenv("DB_PASSWORD");
+
+            con = DriverManager.getConnection(url, user, password);
 
             System.out.println("Database Connected Successfully!");
 
