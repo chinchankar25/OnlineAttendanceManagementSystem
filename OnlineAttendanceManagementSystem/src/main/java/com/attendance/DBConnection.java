@@ -8,7 +8,6 @@ public class DBConnection {
     public static Connection getConnection() {
 
         try {
-
             Class.forName("org.postgresql.Driver");
 
             String url = System.getenv("DB_URL");
@@ -33,16 +32,14 @@ public class DBConnection {
                     password
             );
 
-            System.out.println("Database Connected Successfully!");
+            System.out.println("DATABASE CONNECTED SUCCESSFULLY!");
 
             return con;
 
         } catch (Exception e) {
-
-            System.out.println("DATABASE CONNECTION ERROR:");
-            e.printStackTrace();
-
-            return null;
+            throw new RuntimeException(
+                "DATABASE CONNECTION FAILED: " + e.getMessage(), e
+            );
         }
     }
 }
