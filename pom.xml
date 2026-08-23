@@ -10,7 +10,6 @@
     <groupId>com.attendance</groupId>
     <artifactId>OnlineAttendanceManagementSystem</artifactId>
     <version>1.0</version>
-
     <packaging>war</packaging>
 
     <properties>
@@ -21,14 +20,14 @@
 
     <dependencies>
 
-        <!-- PostgreSQL Database Driver -->
+        <!-- PostgreSQL Driver -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.7.7</version>
         </dependency>
 
-        <!-- Jakarta Servlet API -->
+        <!-- Jakarta Servlet -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
@@ -44,7 +43,6 @@
 
         <plugins>
 
-            <!-- Build WAR file -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
