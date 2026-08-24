@@ -13,7 +13,7 @@ public class DBConnection {
             Class.forName("org.postgresql.Driver");
 
             String url = System.getenv("DB_URL");
-            String username = System.getenv("DB_USER");
+            String username = System.getenv("DB_USERNAME");
             String password = System.getenv("DB_PASSWORD");
 
             con = DriverManager.getConnection(url, username, password);
